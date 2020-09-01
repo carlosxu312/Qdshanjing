@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/message', 'MessageController@index');
-Route::post('/message/submit', 'MessageController@submit');
+Route::post('/message/post', 'MessageController@post');

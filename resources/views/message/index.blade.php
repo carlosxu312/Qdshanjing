@@ -5,7 +5,7 @@
     <body>
         <h1>留言板</h1>
         <div class="login-01">
-            <form action="/message/submit" method="post">
+            <form action="/message/post" method="post">
                 @csrf
                 <ul>
                     <li class="first">

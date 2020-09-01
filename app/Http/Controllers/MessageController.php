@@ -3,6 +3,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Message;
 use Illuminate\Http\Request;
 
 class MessageController extends Controller
@@ -20,9 +21,11 @@ class MessageController extends Controller
             'name' => 'required|max:25',
             'content' => 'required|string|max:500',
         ]);
-        //todo 入库逻辑
-
-        return redirect("/message")->with('message', 'Message sent!');
+        $message = new Message();
+        $message->name = $validatedArr['name'];
+        $message->content = $validatedArr['content'];
+        $message->save();
+        return redirect("/message")->with('message', '留言成功');
     }
 
 }
