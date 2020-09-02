@@ -23,7 +23,6 @@ class CreateMessageTable extends Migration
             $table->charset   = 'utf8mb4';
             $table->collation = 'utf8mb4_general_ci';
         });
-        DB::statement("ALTER TABLE `message` comment '留言表'");
     }
 
     /**

@@ -20,11 +20,5 @@ class MessageTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function testPost()
-    {
-        $response = $this->post( '/message/post', ['name' => 'Carlos','content'=>'Test']);
 
-        $response->assertStatus(302);
-
-    }
 }
